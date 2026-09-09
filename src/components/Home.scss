@@ -1,0 +1,78 @@
+@use "sass:color";
+@use "../styles/variables" as *;
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: $space-xl;
+  max-width: 700px;
+
+  &__greeting {
+    font-family: $font-mono;
+    color: $accent;
+    font-size: 1.5rem;
+    margin-bottom: $space-xs;
+  }
+
+  &__name {
+    font-size: 3rem;
+    margin-bottom: $space-sm;
+  }
+
+  &__tagline {
+    color: $text-secondary;
+    font-size: 1.1rem;
+    margin-bottom: $space-lg;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-md;
+    margin-bottom: $space-xl;
+  }
+
+  &__badge {
+    .badge {
+      font-family: $font-mono;
+      font-size: 0.9rem;
+      color: $text-secondary;
+      border: 1px solid $border-color;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+    }
+  }
+}
+
+.btn {
+  font-family: $font-mono;
+  font-size: 0.9rem;
+  font-weight: 540;
+  padding: 0.7rem 1.3rem;
+  border-radius: $radius;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &--primary {
+    background: $accent;
+    color: $bg-primary;
+
+    &:hover {
+      background: color.adjust($accent, $lightness: 15%);
+    }
+  }
+
+  &--ghost {
+    border-color: $border-color;
+    color: $text-primary;
+
+    &:hover {
+      border-color: $accent;
+    }
+  }
+}
