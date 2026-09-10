@@ -7,7 +7,7 @@ $text-primary: #e6edf3;
 $text-secondary: #8b949e;
 $text-muted: #5c636e;
 
-$accent: #f0883e;
+$accent: #da8bcd;
 $accent-dim: rgba(240, 136, 62, 0.15);
 
 $font-mono: "JetBrains Mono", "Courier New", monospace;
@@ -24,3 +24,6 @@ $space-xl: 3rem;
 
 $radius: 8px;
 $radius-lg: 12px;
+
+$nav-height: 3.2rem;
+$nav-clearance: $nav-height + $space-lg + $space-sm;

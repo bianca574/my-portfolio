@@ -1,0 +1,36 @@
+@use "../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  bottom: $space-sm;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  background: $bg-card;
+  border: 1px solid $border-color;
+  border-radius: 999px;
+  padding: 0.4rem;
+  z-index: 100;
+
+  &__link {
+    font-family: $font-mono;
+    font-size: 0.9rem;
+    font-weight: 545;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    color: $text-secondary;
+    transition:
+      background 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &.active {
+      background: $accent;
+      color: $bg-primary;
+    }
+  }
+}

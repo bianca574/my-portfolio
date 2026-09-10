@@ -1,10 +1,17 @@
-import Home from './components/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Portfolio from './pages/Portfolio'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
